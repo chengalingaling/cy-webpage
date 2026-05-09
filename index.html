@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lim Cheng Yee — AI Product Leader</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      background-color: #eef2ff;
+      color: #4338ca;
+      border: 1px solid #c7d2fe;
+      white-space: nowrap;
+    }
+
+    .metric-card {
+      background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .project-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.12);
+    }
+
+    .skill-row {
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .skill-row:last-child { border-bottom: none; }
+
+    @media (max-width: 768px) {
+      .hide-mobile { display: none; }
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+  <!-- ── NAV ───────────────────────────────────────────────────── -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+      <span class="font-semibold text-slate-900 text-sm tracking-tight"></span>
+      <div class="flex items-center gap-1 text-sm text-slate-500">
+        <a href="#projects" class="px-3 py-1.5 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-colors hide-mobile">Projects</a>
+        <a href="#expertise" class="px-3 py-1.5 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-colors hide-mobile">Expertise</a>
+        <a href="#experience" class="px-3 py-1.5 rounded-md hover:bg-slate-50 hover:text-slate-900 transition-colors hide-mobile">Experience</a>
+        <a href="#contact" class="ml-2 px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-medium transition-colors text-sm">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────────────────── -->
+  <section class="bg-slate-900 hero-grid pt-28 pb-24 px-6 relative overflow-hidden">
+    <!-- Subtle glow -->
+    <div class="absolute top-0 left-1/3 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto relative">
+      <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-3">
+        Lim Cheng Yee
+      </h1>
+      <p class="text-indigo-300 text-xl font-semibold mb-6">
+        AI Product Leader
+      </p>
+      <p class="text-slate-400 text-lg leading-relaxed max-w-2xl mb-10">
+        8+ years building and governing AI systems at scale — from fine-tuning Singapore's first sector-specific LLM to architecting responsible AI governance infrastructure for 1B+ users. I bridge deep technical execution with cross-functional programme leadership across engineering, policy, and senior stakeholders.
+      </p>
+
+      <!-- Key themes -->
+      <div class="flex flex-wrap gap-2 mb-10">
+        <span class="text-xs font-medium text-indigo-300 bg-indigo-500/15 border border-indigo-400/25 px-3 py-1.5 rounded-full">Responsible AI &amp; Governance</span>
+        <span class="text-xs font-medium text-indigo-300 bg-indigo-500/15 border border-indigo-400/25 px-3 py-1.5 rounded-full">LLM Fine-tuning &amp; RLHF</span>
+        <span class="text-xs font-medium text-indigo-300 bg-indigo-500/15 border border-indigo-400/25 px-3 py-1.5 rounded-full">Privacy-Preserving AI</span>
+        <span class="text-xs font-medium text-indigo-300 bg-indigo-500/15 border border-indigo-400/25 px-3 py-1.5 rounded-full">Data Strategy</span>
+        <span class="text-xs font-medium text-indigo-300 bg-indigo-500/15 border border-indigo-400/25 px-3 py-1.5 rounded-full">Solution Architecture</span>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="https://linkedin.com/in/limchengyee" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2.5 bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="mailto:limchengyee@outlook.com"
+           class="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white px-5 py-2.5 rounded-lg font-medium text-sm transition-colors border border-white/20">
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ───────────────────────────────────────────────── -->
+  <section id="projects" class="py-20 px-6 bg-slate-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12">
+        <p class="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-2">Featured Work</p>
+        <h2 class="text-3xl font-bold text-slate-900 mb-3">Key Projects</h2>
+        <p class="text-slate-500 max-w-xl">From model development to responsible AI adoption — across government, enterprise platforms, and national-scale deployments.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- ── PROJECT 1: GPT-Legal ── -->
+        <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col overflow-hidden">
+          <!-- Banner -->
+          <div class="h-36 bg-gradient-to-br from-indigo-500 to-indigo-800 flex items-center justify-center relative">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 18px 18px;"></div>
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" class="relative z-10">
+              <rect x="8" y="6" width="30" height="38" rx="3" fill="white" fill-opacity="0.18" stroke="white" stroke-opacity="0.55" stroke-width="2"/>
+              <path d="M26 6 L26 18 L38 18" fill="white" fill-opacity="0.12" stroke="white" stroke-opacity="0.4" stroke-width="1.5"/>
+              <line x1="14" y1="26" x2="32" y2="26" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
+              <line x1="14" y1="31" x2="32" y2="31" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
+              <line x1="14" y1="36" x2="24" y2="36" stroke="white" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round"/>
+              <path d="M44 10 L46 16 L52 18 L46 20 L44 26 L42 20 L36 18 L42 16 Z" fill="white" fill-opacity="0.9"/>
+            </svg>
+          </div>
+          <!-- Content -->
+          <div class="p-7 flex flex-col flex-1">
+            <div class="flex items-start justify-between gap-2 mb-4">
+              <span class="text-xs font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded-full">01</span>
+              <span class="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full">IMDA · SAL · AWS · Sept 2024</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1">GPT-Legal</h3>
+            <p class="text-indigo-600 text-sm font-semibold mb-3">Singapore's First Sector-Specific LLM</p>
+            <p class="text-slate-500 text-sm leading-relaxed mb-5">
+              Led end-to-end development of a domain-adapted LLM for Singapore's legal sector — from model training and responsible AI tooling to deployment on LawNet 4.0 serving 75% of the country's practising lawyers.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-600 mb-5">
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Domain-specific SFT on Amazon SageMaker; RLHF pipeline with Singapore Courts legal clerks; DPO for alignment to legal formatting standards</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Productionised hallucination detection with a 90% accuracy threshold enforced before every user-facing release</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>End-to-end data lineage (S3/SageMaker) for compliance across public and proprietary legal data during training</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Aligned SAL, AWS, and Singapore Courts across a multi-quarter roadmap; presented to the Chief Justice of Singapore</li>
+            </ul>
+            <div class="grid grid-cols-3 gap-2 mb-5 mt-auto">
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">15,000+</div><div class="text-xs text-emerald-600 mt-0.5">judgments summarised</div></div>
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">hrs → mins</div><div class="text-xs text-emerald-600 mt-0.5">research time</div></div>
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">~10,000</div><div class="text-xs text-emerald-600 mt-0.5">lawyers served</div></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="tag">LLM Fine-tuning</span>
+              <span class="tag">RLHF / DPO</span>
+              <span class="tag">Responsible AI</span>
+              <span class="tag">Hallucination Detection</span>
+              <span class="tag">AWS SageMaker</span>
+              <span class="tag">Data Lineage</span>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-5">
+              <a href="https://govinsider.asia/intl-en/article/from-hours-to-minutes-speeding-up-legal-research-with-an-ai-assistant" target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                GovInsider Article
+              </a>
+              <a href="https://aws.amazon.com/solutions/case-studies/imda-case-study/" target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800 transition-colors">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                AWS Case Study
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT 2: GenAI Safety Platform ── -->
+        <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col overflow-hidden">
+          <!-- Banner -->
+          <div class="h-36 bg-gradient-to-br from-slate-600 to-slate-900 flex items-center justify-center relative">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 18px 18px;"></div>
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" class="relative z-10">
+              <path d="M28 6 L48 14 L48 28 C48 40 39 47 28 52 C17 47 8 40 8 28 L8 14 Z" fill="white" fill-opacity="0.15" stroke="white" stroke-opacity="0.65" stroke-width="2"/>
+              <path d="M28 12 L44 19 L44 28 C44 37 36 43 28 47 C20 43 12 37 12 28 L12 19 Z" fill="white" fill-opacity="0.06"/>
+              <path d="M20 28 L25 34 L36 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.9"/>
+            </svg>
+          </div>
+          <!-- Content -->
+          <div class="p-7 flex flex-col flex-1">
+            <div class="flex items-start justify-between gap-2 mb-4">
+              <span class="text-xs font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded-full">02</span>
+              <span class="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full">TikTok | ByteDance · 2024–Present</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1">GenAI Safety-as-a-Solution</h3>
+            <p class="text-indigo-600 text-sm font-semibold mb-3">Horizontal AI Governance Platform · 1B+ Users</p>
+            <p class="text-slate-500 text-sm leading-relaxed mb-5">
+              Architected a unified AI governance platform to replace six siloed, product-specific safety stacks across chatbots, image/video generation, code, ads, and ModelArk with a single authoritative standard.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-600 mb-5">
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Defined unified GenAI risk taxonomy and assessment frameworks replacing ad-hoc, product-siloed safety approaches</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Architected reusable moderation pipelines across text, image/video, code, and model-level safety surfaces</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Built and led the GenAI Safety Task Force — aligning Product, Policy, Algo, DS, and Ops across timezones for 24/7 coverage</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Standard adopted cross-platform; consistent enforcement across 6+ verticals for 1B+ users globally</li>
+            </ul>
+            <div class="grid grid-cols-3 gap-2 mb-5 mt-auto">
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">1B+</div><div class="text-xs text-emerald-600 mt-0.5">users covered</div></div>
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">6+</div><div class="text-xs text-emerald-600 mt-0.5">product verticals</div></div>
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">1 standard</div><div class="text-xs text-emerald-600 mt-0.5">cross-platform</div></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tag">AI Governance</span>
+              <span class="tag">Responsible AI</span>
+              <span class="tag">Risk Frameworks</span>
+              <span class="tag">Platform Architecture</span>
+              <span class="tag">Programme Management</span>
+              <span class="tag">XFN Leadership</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT 3: Agentic Moderation & Eval ── -->
+        <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col overflow-hidden">
+          <!-- Banner -->
+          <div class="h-36 bg-gradient-to-br from-violet-500 to-purple-800 flex items-center justify-center relative">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 18px 18px;"></div>
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" class="relative z-10">
+              <rect x="18" y="18" width="20" height="20" rx="3" fill="white" fill-opacity="0.2" stroke="white" stroke-opacity="0.7" stroke-width="2"/>
+              <rect x="23" y="23" width="10" height="10" rx="1.5" fill="white" fill-opacity="0.45"/>
+              <line x1="23" y1="18" x2="23" y2="10" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+              <line x1="33" y1="18" x2="33" y2="10" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+              <line x1="23" y1="38" x2="23" y2="46" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+              <line x1="33" y1="38" x2="33" y2="46" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+              <line x1="18" y1="23" x2="10" y2="23" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+              <line x1="18" y1="33" x2="10" y2="33" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+              <line x1="38" y1="23" x2="46" y2="23" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+              <line x1="38" y1="33" x2="46" y2="33" stroke="white" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <!-- Content -->
+          <div class="p-7 flex flex-col flex-1">
+            <div class="flex items-start justify-between gap-2 mb-4">
+              <span class="text-xs font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded-full">03</span>
+              <span class="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full">TikTok | ByteDance · 2024–Present</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1">Agentic Moderation &amp; Model Evaluation</h3>
+            <p class="text-indigo-600 text-sm font-semibold mb-3">LLM/VLM Agentic Pipelines · Evaluation at Scale</p>
+            <p class="text-slate-500 text-sm leading-relaxed mb-5">
+              Replaced fragmented keyword-filter pipelines and manual labelling workflows with agentic AI systems and a productionised evaluation lifecycle — driving measurable gains in speed, cost, and model quality.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-600 mb-5">
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Redesigned cross-product moderation to a unified LLM/VLM agentic workflow with prompt engineering and image tagging models</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Productionised AI-powered autolabelling pipeline achieving 80% precision/recall vs. human-curated safety standards</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Built end-to-end safety evaluation lifecycle with leadership leaderboard; advised on model quality vs. GPU cost trade-offs</li>
+            </ul>
+            <div class="grid grid-cols-3 gap-2 mb-5 mt-auto">
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">↓60%+</div><div class="text-xs text-emerald-600 mt-0.5">moderation load</div></div>
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">3×</div><div class="text-xs text-emerald-600 mt-0.5">labelling cost reduction</div></div>
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">↑75%</div><div class="text-xs text-emerald-600 mt-0.5">faster iteration</div></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tag">Agentic AI</span>
+              <span class="tag">LLM / VLM</span>
+              <span class="tag">Model Evaluation</span>
+              <span class="tag">MLOps</span>
+              <span class="tag">Autolabelling</span>
+              <span class="tag">GPU Optimisation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── PROJECT 4: Centre for Citizen Insights ── -->
+        <div class="project-card bg-white rounded-2xl shadow-sm border border-slate-200 flex flex-col overflow-hidden">
+          <!-- Banner -->
+          <div class="h-36 bg-gradient-to-br from-teal-500 to-emerald-700 flex items-center justify-center relative">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 18px 18px;"></div>
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" class="relative z-10">
+              <rect x="8" y="36" width="7" height="12" rx="1.5" fill="white" fill-opacity="0.4"/>
+              <rect x="18" y="28" width="7" height="20" rx="1.5" fill="white" fill-opacity="0.6"/>
+              <rect x="28" y="20" width="7" height="28" rx="1.5" fill="white" fill-opacity="0.8"/>
+              <rect x="37" y="31" width="13" height="11" rx="2" fill="white" fill-opacity="0.2" stroke="white" stroke-opacity="0.75" stroke-width="1.5"/>
+              <path d="M40 31 L40 27 C40 23 50 23 50 27 L50 31" stroke="white" stroke-opacity="0.75" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <circle cx="43.5" cy="37" r="1.8" fill="white" fill-opacity="0.85"/>
+            </svg>
+          </div>
+          <!-- Content -->
+          <div class="p-7 flex flex-col flex-1">
+            <div class="flex items-start justify-between gap-2 mb-4">
+              <span class="text-xs font-bold text-indigo-600 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded-full">04</span>
+              <span class="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full">Prime Minister's Office · 2019–2022</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-1">Centre for Citizen Insights</h3>
+            <p class="text-indigo-600 text-sm font-semibold mb-3">Privacy-Preserving Analytics · National Scale</p>
+            <p class="text-slate-500 text-sm leading-relaxed mb-5">
+              Built Singapore's Cabinet-level policy analytics platform with privacy-enhancing techniques at its core — enabling cross-agency data collaboration without exposing citizen PII.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-600 mb-5">
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Implemented hashing, fuzzy matching, and aggregated learning to protect citizen PII across cross-agency data joins — enabling analysis without direct data sharing</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Explored federated learning and synthetic data generation as privacy-enhancing approaches for future cross-agency collaboration</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>ML clustering and behavioural analytics engine; Tableau data product for cross-agency teams; MVP delivered in 4 months</li>
+              <li class="flex gap-2.5"><span class="text-indigo-400 shrink-0 font-bold mt-0.5">→</span>Insights presented directly to the Singapore Cabinet; informed 2 national policy pivots with &gt;85% public alignment</li>
+            </ul>
+            <div class="grid grid-cols-3 gap-2 mb-5 mt-auto">
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">↓500%</div><div class="text-xs text-emerald-600 mt-0.5">decision latency</div></div>
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">↓75%</div><div class="text-xs text-emerald-600 mt-0.5">ad-hoc requests</div></div>
+              <div class="metric-card"><div class="text-base font-bold text-emerald-700">Cabinet</div><div class="text-xs text-emerald-600 mt-0.5">presented directly</div></div>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tag">Privacy-Enhancing Tech</span>
+              <span class="tag">Hashing &amp; Fuzzy Matching</span>
+              <span class="tag">Federated Learning</span>
+              <span class="tag">Synthetic Data</span>
+              <span class="tag">Data Strategy</span>
+              <span class="tag">ML Analytics</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERTISE ─────────────────────────────────────────────── -->
+  <section id="expertise" class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12">
+        <p class="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-2">Capabilities</p>
+        <h2 class="text-3xl font-bold text-slate-900 mb-3">Expertise</h2>
+        <p class="text-slate-500 max-w-xl">Technical depth and strategic programme execution — not as trade-offs, but as a single capability.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- 1. AI Solution Architecture -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-9 h-9 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-slate-900 text-base">AI Solution Architecture</h3>
+          </div>
+          <div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">LLM Fine-tuning &amp; Post-training</div>
+              <div class="text-xs text-slate-500">SFT, RLHF, DPO, domain adaptation, alignment</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Model Evaluation &amp; MLOps</div>
+              <div class="text-xs text-slate-500">Evaluation pipelines, autolabelling, quality/cost trade-offs, GPU optimisation</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Agentic AI Systems</div>
+              <div class="text-xs text-slate-500">LLM/VLM agentic workflows, prompt engineering, multi-modal pipelines</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Privacy-Enhancing Technologies</div>
+              <div class="text-xs text-slate-500">Federated learning, synthetic data generation, hashing, fuzzy matching</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Cloud Architecture</div>
+              <div class="text-xs text-slate-500">AWS (SageMaker, S3, EC2), data lineage, compliance-ready ML pipelines</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Product Roadmapping -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-9 h-9 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-slate-900 text-base">Product Roadmapping</h3>
+          </div>
+          <div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">0→1 Product Development</div>
+              <div class="text-xs text-slate-500">Concept to production; sector-specific AI deployment; platform strategy</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Agile Delivery</div>
+              <div class="text-xs text-slate-500">Certified CSM &amp; CSPO; sprint planning, MVP scoping, iterative delivery</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">User Research &amp; Discovery</div>
+              <div class="text-xs text-slate-500">Qualitative synthesis, user archetypes, insight-to-strategy translation</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">GenAI Platform Strategy</div>
+              <div class="text-xs text-slate-500">Horizontal platform design, safety-by-design, GTM planning</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Data Product Development</div>
+              <div class="text-xs text-slate-500">Cross-agency analytics platforms, self-serve data products, Tableau</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Programme Management -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-9 h-9 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-slate-900 text-base">Programme Management</h3>
+          </div>
+          <div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Cross-Functional Leadership</div>
+              <div class="text-xs text-slate-500">Engineering, Policy, Legal, Ops alignment; task force management across timezones</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Multi-Stakeholder Delivery</div>
+              <div class="text-xs text-slate-500">Multi-quarter roadmaps; government-industry partnership management</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Executive Stakeholder Management</div>
+              <div class="text-xs text-slate-500">Cabinet, C-suite, and senior government leadership briefings and alignment</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Vendor &amp; Partnership Management</div>
+              <div class="text-xs text-slate-500">AWS, Singapore Academy of Law, tech industry and public sector partnerships</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Regulatory &amp; Policy Engagement</div>
+              <div class="text-xs text-slate-500">Digital Economy Agreements, ASEAN frameworks, compliance-driven delivery</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Responsible AI -->
+        <div class="bg-slate-50 rounded-2xl p-7 border border-slate-200">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-9 h-9 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="font-semibold text-slate-900 text-base">Responsible AI</h3>
+          </div>
+          <div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">AI Governance Frameworks</div>
+              <div class="text-xs text-slate-500">Risk taxonomy design, safety standards, cross-platform policy adoption</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Hallucination Detection &amp; Output Validation</div>
+              <div class="text-xs text-slate-500">Safety-by-design, accuracy thresholds, discrepancy flagging before deployment</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Privacy &amp; Data Ethics</div>
+              <div class="text-xs text-slate-500">PII handling in ML workflows, privacy-by-design, data lineage for compliance</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">AI Risk Assessment</div>
+              <div class="text-xs text-slate-500">Risk categorisation, pre/post-launch safety evaluation, trend monitoring</div>
+            </div>
+            <div class="skill-row">
+              <div class="text-sm font-semibold text-slate-800 mb-0.5">Safety Engineering</div>
+              <div class="text-xs text-slate-500">Output filtering, prompt sanitisation, content safety pipeline design</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE TIMELINE ───────────────────────────────────── -->
+  <section id="experience" class="py-20 px-6 bg-slate-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-12">
+        <p class="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-2">Career</p>
+        <h2 class="text-3xl font-bold text-slate-900 mb-3">Experience</h2>
+        <p class="text-slate-500">Across industry AI, government technology, and national policy.</p>
+      </div>
+
+      <!-- Timeline using flex layout -->
+      <div class="space-y-0">
+
+        <!-- TikTok -->
+        <div class="flex gap-6">
+          <div class="flex flex-col items-center">
+            <div class="w-4 h-4 rounded-full bg-indigo-500 border-2 border-white shadow-sm shrink-0 mt-5"></div>
+            <div class="w-px flex-1 bg-slate-200 mt-1"></div>
+          </div>
+          <div class="pb-8 flex-1">
+            <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+                <div>
+                  <h3 class="font-semibold text-slate-900">AI Product Manager, Trust &amp; Safety</h3>
+                  <p class="text-indigo-600 font-medium text-sm mt-0.5">TikTok | ByteDance</p>
+                </div>
+                <span class="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">2024 – Present · Singapore</span>
+              </div>
+              <p class="text-sm text-slate-500 leading-relaxed">Spearheaded GenAI Safety-as-a-Solution — a horizontal content safety platform for a 1B+ user platform. Led agentic moderation systems, AI-powered autolabelling pipelines, and model evaluation lifecycle across 6+ GenAI product verticals including chatbots, image/video generation, code, ads, and ModelArk.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- IMDA -->
+        <div class="flex gap-6">
+          <div class="flex flex-col items-center">
+            <div class="w-4 h-4 rounded-full bg-indigo-500 border-2 border-white shadow-sm shrink-0 mt-5"></div>
+            <div class="w-px flex-1 bg-slate-200 mt-1"></div>
+          </div>
+          <div class="pb-8 flex-1">
+            <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+                <div>
+                  <h3 class="font-semibold text-slate-900">Senior Product Manager, AI Engineering</h3>
+                  <p class="text-indigo-600 font-medium text-sm mt-0.5">Infocomm Media Development Authority</p>
+                </div>
+                <span class="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">2022 – 2023 · Singapore</span>
+              </div>
+              <p class="text-sm text-slate-500 leading-relaxed">Led GPT-Legal — Singapore's first sector-specific LLM — from domain-specific fine-tuning and RLHF pipeline to responsible AI deployment on LawNet 4.0 in partnership with the Singapore Academy of Law and AWS. Summarised 15,000+ court judgments; serves 75% of Singapore's practising lawyers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PMO -->
+        <div class="flex gap-6">
+          <div class="flex flex-col items-center">
+            <div class="w-4 h-4 rounded-full bg-indigo-500 border-2 border-white shadow-sm shrink-0 mt-5"></div>
+            <div class="w-px flex-1 bg-slate-200 mt-1"></div>
+          </div>
+          <div class="pb-8 flex-1">
+            <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+                <div>
+                  <h3 class="font-semibold text-slate-900">Senior Manager, Policy Analytics</h3>
+                  <p class="text-indigo-600 font-medium text-sm mt-0.5">Prime Minister's Office Strategy Group</p>
+                </div>
+                <span class="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">2019 – 2022 · Singapore</span>
+              </div>
+              <p class="text-sm text-slate-500 leading-relaxed">Established the Centre for Citizen Insights under the Head of Civil Service. Built ML-powered analytics platform informing Cabinet-level policy decisions; delivered MVP in 4 months and grew user pipeline 50%+ annually. Insights informed 2 national policy pivots with &gt;85% public alignment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- MCI -->
+        <div class="flex gap-6">
+          <div class="flex flex-col items-center">
+            <div class="w-4 h-4 rounded-full bg-slate-400 border-2 border-white shadow-sm shrink-0 mt-5"></div>
+            <div class="w-px flex-1 bg-transparent mt-1"></div>
+          </div>
+          <div class="pb-0 flex-1">
+            <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+              <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+                <div>
+                  <h3 class="font-semibold text-slate-900">Assistant Manager, Industry Division</h3>
+                  <p class="text-indigo-600 font-medium text-sm mt-0.5">Ministry of Communications and Information</p>
+                </div>
+                <span class="text-xs text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">2017 – 2019 · Singapore</span>
+              </div>
+              <p class="text-sm text-slate-500 leading-relaxed">Expanded Singapore's TechSkills Accelerator by $145M (13,000 new training places). Led user research, synthesised insights into policy archetypes for Singapore's global tech talent strategy, and reviewed Digital Economy Agreements and ASEAN digital connectivity frameworks.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EDUCATION & CREDENTIALS ───────────────────────────────── -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12">
+        <p class="text-indigo-600 text-sm font-semibold uppercase tracking-widest mb-2">Background</p>
+        <h2 class="text-3xl font-bold text-slate-900">Education &amp; Credentials</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+          <div class="text-xs text-slate-400 font-medium mb-3">2016 – 2017 · United States</div>
+          <h3 class="font-bold text-slate-900 mb-1">MA, Social Sciences</h3>
+          <p class="text-indigo-600 text-sm font-medium mb-2">University of Chicago</p>
+          <p class="text-xs text-slate-500">Certificate in Computational Science &amp; AI</p>
+        </div>
+
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+          <div class="text-xs text-slate-400 font-medium mb-3">2013 – 2016 · United Kingdom</div>
+          <h3 class="font-bold text-slate-900 mb-1">BSc Economics</h3>
+          <p class="text-indigo-600 text-sm font-medium mb-2">University of Warwick</p>
+          <p class="text-xs text-slate-500">Public Service Commission Scholar &mdash; one of 70 recipients</p>
+        </div>
+
+        <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+          <div class="text-xs text-slate-400 font-medium mb-3">Certifications &amp; Recognition</div>
+          <div class="space-y-3">
+            <div class="flex items-start gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-400 mt-1 shrink-0"></span>
+              <div>
+                <div class="text-sm font-medium text-slate-800">Certified Scrum Product Owner</div>
+                <div class="text-xs text-slate-400">CSPO · Scrum Alliance · 2022</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-400 mt-1 shrink-0"></span>
+              <div>
+                <div class="text-sm font-medium text-slate-800">Certified Scrum Master</div>
+                <div class="text-xs text-slate-400">CSM · Scrum Alliance · 2021</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="w-2 h-2 rounded-full bg-amber-400 mt-1 shrink-0"></span>
+              <div>
+                <div class="text-sm font-medium text-slate-800">Public Service Leadership Programme</div>
+                <div class="text-xs text-slate-400">Selected top talent · Singapore Civil Service · 2017–2023</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────────────────── -->
+  <section id="contact" class="py-24 px-6 bg-slate-900 relative overflow-hidden">
+    <div class="absolute top-0 right-1/4 w-80 h-80 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="max-w-3xl mx-auto text-center relative">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Let's connect</h2>
+      <p class="text-slate-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+        Based in Singapore.
+      </p>
+      <div class="flex justify-center gap-4 flex-wrap">
+        <a href="mailto:limchengyee@outlook.com"
+           class="inline-flex items-center gap-2.5 bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          limchengyee@outlook.com
+        </a>
+        <a href="https://linkedin.com/in/limchengyee" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/15 text-white px-6 py-3 rounded-lg font-medium transition-colors border border-white/20">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────────── -->
+  <footer class="bg-slate-950 py-6 px-6">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <p class="text-slate-600 text-sm">© 2025 Lim Cheng Yee</p>
+      <p class="text-slate-700 text-xs">Singapore</p>
+    </div>
+  </footer>
+
+</body>
+</html>
